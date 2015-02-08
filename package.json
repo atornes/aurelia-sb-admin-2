@@ -1,22 +1,23 @@
 {
-  "name": "aurelia-skeleton-navigation",
-  "version": "0.9.5",
-  "description": "A starter kit for building a standard navigation-style app with Aurelia.",
+  "name": "aurelia-sb-admin-2",
+  "version": "0.0.1",
+  "description": "Startbootstraps SB Admin 2 theme implemented in Aurelia.",
   "keywords": [
     "aurelia",
-    "navigation",
-    "skeleton"
+    "bootstrap",
+    "sbadmin2",
+    "startbootstrap"
   ],
   "homepage": "http://aurelia.io",
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-navigation/issues"
+    "url": "https://github.com/atornes/aurelia-sb-admin-2/issues"
   },
   "license": "MIT",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
+  "author": "Anders Tornes <thetexasboss@gmail.com>",
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/skeleton-navigation"
+    "url": "https://github.com/atornes/aurelia-sb-admin-2"
   },
   "devDependencies": {
     "aurelia-tools": "^0.1.0",
@@ -52,7 +53,10 @@
       "aurelia-http-client": "^0.4.3",
       "aurelia-router": "^0.5.1",
       "bootstrap": "^3.3.1",
-      "font-awesome": "^4.2.0"
+      "datatables": "^1.10.4",
+      "font-awesome": "^4.2.0",
+      "jquery": "^2.1.3",
+      "metismenu": "npm:metismenu@^1.1.3"
     }
   }
 }

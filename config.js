@@ -3,7 +3,8 @@ System.config({
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js",
-    "aurelia-skeleton-navigation/*": "lib/*.js"
+    "aurelia-skeleton-navigation/*": "lib/*.js",
+    "aurelia-sb-admin-2/*": "lib/*.js"
   }
 });
 
@@ -15,7 +16,14 @@ System.config({
     "aurelia-http-client": "github:aurelia/http-client@0.4.4",
     "aurelia-router": "github:aurelia/router@0.5.5",
     "bootstrap": "github:twbs/bootstrap@3.3.2",
+    "datatables": "github:DataTables/DataTables@1.10.4",
     "font-awesome": "npm:font-awesome@4.3.0",
+    "jquery": "github:components/jquery@2.1.3",
+    "metismenu": "npm:metismenu@1.1.3",
+    "github:DataTables/DataTables@1.10.4": {
+      "css": "github:systemjs/plugin-css@0.1.0",
+      "jquery": "github:components/jquery@2.1.3"
+    },
     "github:aurelia/binding@0.3.3": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.4.2",
       "aurelia-metadata": "github:aurelia/metadata@0.3.1",

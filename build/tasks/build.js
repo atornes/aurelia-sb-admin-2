@@ -7,6 +7,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var paths = require('../paths');
 var compilerOptions = require('../6to5-options');
 var assign = Object.assign || require('object.assign');
+var less = require('gulp-less');
+var path = require('path');
 
 gulp.task('build-system', function () {
   return gulp.src(paths.source)
@@ -24,10 +26,19 @@ gulp.task('build-html', function () {
     .pipe(gulp.dest(paths.output));
 });
 
+gulp.task('build-less', function () {
+  return gulp.src(paths.less)
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(less({ paths: ['paths.less']/*, compress: true*/ }))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(paths.styleout));
+});
+
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html'],
+    ['build-system', 'build-html', 'build-less'],
     callback
   );
 });

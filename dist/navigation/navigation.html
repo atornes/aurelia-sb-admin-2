@@ -1,0 +1,12 @@
+<template>
+  <import from="./nav-toggle"></import>
+  <import from="./nav-sidebar"></import>
+
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="navbar-header">
+      <nav-toggle></nav-toggle>
+      <a class="navbar-brand" href.bind="href">${title}</a>
+    </div>
+    <nav-sidebar router.bind="router"></nav-sidebar>
+  </nav>
+</template>

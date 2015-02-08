@@ -1,0 +1,27 @@
+<template>
+  <import from="./nav-sidebar-search"></import>
+
+  <div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+      <ul class="nav" id="side-menu">
+        <nav-sidebar-search></nav-sidebar-search>
+
+        <li repeat.for="row of buildLevels(router.navigation)">
+
+          <a href.bind="row.href">
+            <i if.bind="row.config.faIcon" class="fa ${row.config.faIcon} fa-fw"></i> ${row.title}
+            <span if.bind="row.children" class="fa arrow"></span>
+          </a>
+
+          <ul if.bind="row.children" class="nav nav-second-level">
+            <li repeat.for="child of row.children">
+              <a href.bind="child.href">
+                <i if.bind="child.faIcon" class="fa ${child.faIcon} fa-fw"></i> ${child.title}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
